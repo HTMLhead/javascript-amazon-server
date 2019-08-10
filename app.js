@@ -11,6 +11,7 @@ const dataRouter = require("./route/dataRoute");
 
 app.use("/*******", dataRouter);
 
-app.listen(8000, () => {
-  console.log("Start server on port 8000!!");
+var port = process.env.PORT || 8000; //*
+app.listen(port, () => {
+  console.log("Server On!");
 });
